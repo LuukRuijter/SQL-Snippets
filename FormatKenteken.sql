@@ -1,14 +1,13 @@
 /* 
-   Date: 2020-06-08 
-   Author: L Ruijter
+   Date: 	2020-06-08 
+   Author: 	L Ruijter
    Description: 
-        Function to format a Dutch licenceplate into the correct format. 
-				A dutch licence plate can exist of Numbers and Chars. (https://nl.wikipedia.org/wiki/Nederlands_kenteken ) 
-				Whenever a switch a from numbers or chars exists a "-" should be added with a maximum of two.
-        Or whenever 4 the same datatypes follow eachother with 1 switch after or previous (XXXX99 / 99XXXX). It should split in to a XX-XX-XX format.
-				The rules are bit more complicated but this catches around 99.99% of the legal normal licence plates.
-        
-   NL:TL:DR Format Kenteken SQL Functie. 
+       	 	Function to format a Dutch licenceplate into the correct format. 
+		A dutch licence plate can exist of Numbers and Chars. (https://nl.wikipedia.org/wiki/Nederlands_kenteken ) 
+		Whenever a switch a from numbers or chars exists a "-" should be added with a maximum of two.
+        	Or whenever 4 the same datatypes follow eachother with 1 switch after or previous (XXXX99 / 99XXXX). It should split in to a XX-XX-XX format.
+		The rules are bit more complicated but this catches around 99.99% of the legal normal licence plates.
+   NL:TL:DR 	Format Kenteken SQL Functie. 
 				
 */
 create function FormatKenteken (
