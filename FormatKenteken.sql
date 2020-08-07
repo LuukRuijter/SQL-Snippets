@@ -15,26 +15,28 @@ create function FormatKenteken (
 			       )
 returns nvarchar(16)  
 begin
+	--Vars for the procedure
 	declare @result  nvarchar(8) 
+		@StreepCount int = 0
 
 	-- Clean the Licenceplate so incase of vaulty input.
 	set @kenteken = replace(@kenteken,'-','')
 
- 	-- Slice the Licenceplate into Differnt Vars so we can insert them into the temp table.
+ 	-- Slice the Licenceplate into Differnt Vars so we can use them for some wizardry.
 	declare  @1 varchar(2) = substring(@kenteken,1,1)
-			,@2 varchar(2) = substring(@kenteken,2,1)
-			,@3 varchar(2) = substring(@kenteken,3,1)
-			,@4 varchar(2) = substring(@kenteken,4,1)
-			,@5 varchar(2) = substring(@kenteken,5,1)
-			,@6 varchar(2) = substring(@kenteken,6,1)
-
+		,@2 varchar(2) = substring(@kenteken,2,1)
+		,@3 varchar(2) = substring(@kenteken,3,1)
+		,@4 varchar(2) = substring(@kenteken,4,1)
+		,@5 varchar(2) = substring(@kenteken,5,1)
+		,@6 varchar(2) = substring(@kenteken,6,1)
+		
+	--We want to know if the licence plate char is either a number or not. 
     	declare  @1i int = isnumeric(@1)
 		,@2i int = isnumeric(@2)
 		,@3i int = isnumeric(@3)
 		,@4i int = isnumeric(@4)
 		,@5i int = isnumeric(@5)
 		,@6i int = isnumeric(@6)
-		,@StreepCount int = 0
 
 	--Check if the next char has a differnt datatype then current.
 	--If this is the case add a "-" to the current char. 
