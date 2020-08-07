@@ -65,10 +65,7 @@ begin
 
 	if @5i <> @6i and @StreepCount < 2
 		set @5 += '-'
-	
-	if @5i <> @6i and @StreepCount < 2
-		set @5 += '-'
-	
+		
 	--Once all the checks have been concat them back to 1 licence plate.
 	set @result = concat(@1,@2,@3,@4,@5,@6)
     
