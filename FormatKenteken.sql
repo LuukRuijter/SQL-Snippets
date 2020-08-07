@@ -40,21 +40,32 @@ begin
 	--If this is the case add a "-" to the current char. 
 	--Since the max amount of stripes per plate is 2 stop after 2 have been added
 	if @1i <> @2i
+	begin
 		set @1 += '-'
 		set @StreepCount += 1
+	end
 
 	if @2i <> @3i  
+	begin
 		set @2 += '-'
 		set @StreepCount += 1
+	end
 
 	if @3i <> @4i and @StreepCount < 2
+	begin
 		set @3 += '-'
 		set @StreepCount += 1 
+	end
 
 	if @4i <> @5i and @StreepCount < 2
+	begin
 		set @4 += '-'
 		set @StreepCount += 1
+	end
 
+	if @5i <> @6i and @StreepCount < 2
+		set @5 += '-'
+	
 	if @5i <> @6i and @StreepCount < 2
 		set @5 += '-'
 	
