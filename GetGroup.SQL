@@ -12,8 +12,8 @@
 				
 */
 create  function dbo.getGroup (  
-                                @unit varchar(50)    -- The value you want to put in a group.
-			      , @groupsize int       -- Size of your groups. 
+                                @Unit varchar(50)    -- The value you want to put in a group.
+			      , @GroupSize int       -- Size of your groups. 
 			      , @MaxGroupSize int    -- If you want to limit the group size
 			      , @ShowGroup bit = 0   -- Set on 1  if you want a sort number before your group name.
 			      )  
