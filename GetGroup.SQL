@@ -2,16 +2,18 @@
    Date: 	2020-08-20 
    Author: 	L Ruijter
    Description: 
-       	 	Function to put units in to a group. For instance you want to group numbers from 1-100 in into sections of 10.
-		This function will result for each unit the group it would be in + a optional sort number.
+       	 	Function to put units in to a group. 
+		For instance you want to group numbers from 1-100 into sections of 10.
+		This function will result the group for each unit the group it would be in + a optional sort number.
 		77 for istance would be placed inside "8. 70 - 100 ". Anything greater then the max size will be returned as max group size +.
 		So using the same parameters as the previous example 140 would be "11. 100+" 	
+		
    NL:TL:DR 	Getallen in groepen doen.
 				
 */
 create  function dbo.getGroup (  
-                                 @unit varchar(50)
-			      , @groupsize int		 -- Size of your group
+                                @unit varchar(50)    -- The value you want to put in a group.
+			      , @groupsize int       -- Size of your groups. 
 			      , @MaxGroupSize int    -- If you want to limit the group size
 			      , @ShowGroup bit = 0   -- Set on 1  if you want a sort number before your group name.
 			      )  
