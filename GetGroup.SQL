@@ -28,7 +28,7 @@ begin
 		 , @GroupSortNo  int
 		 , @Group varchar(50) --Return Var
 
-	set @UnitInt = cast(cast(@unit as numeric(10,2)) as int)
+	set @UnitInt = cast(cast(@unit as numeric(20,2)) as int)
 
 	--Check if the units are bigger then the max size. If this is true we want to find the max group number and return it with a '+' sign.
 	if @UnitInt >= @MaxGroupSize
