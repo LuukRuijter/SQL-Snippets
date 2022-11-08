@@ -58,11 +58,7 @@ begin
 				     case when  @ShowGroup = 1 
 					   then concat(@GroupSortNo + case when @round = 0 then 2 else  1 end ,'. ') -- +2 if the groups are not round
 			 	     end
-				    ,format( case when @round = 0 
-								 then @MaxGroupSize
-								 else @GroupSize  * @GroupSortNo
-							 end
-							,'#,0' )
+				    ,format(@MaxGroupSizels ,'#,0' )
 				    ,'+'		 
 					) 
 				   
