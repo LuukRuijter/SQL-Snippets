@@ -15,11 +15,11 @@ GO
    Description: 
        	Function to put units into a group. 
 	For instance you want to group numbers from 1-100 into sections of 10.
-	This function will result the group for each unit the group it would be in + a optional sort number.
+	This function will return the group for each unit with the group it should be in + a optional sort number.
 	77 for istance would be placed inside "8. 70 - 80 anything g greater then the max size will be returned as max group size +.
 	So using the same parameters as the previous example 140 would be "11. 100+" 	
-	If you would use not round groups like 24 with a max of 30 it will divide the last group with the remainder.
-	Groups of 24 with a max of 30 with result in:
+	When you groups are not rounded like 24 with a max of 30 it will divide the last group with the remainder.
+	Groups of 24 with a max of 30 will result in:
 	1. 0 - 24
 	2. 24- 30
 	3. 30+ 		
