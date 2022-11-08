@@ -73,8 +73,8 @@ begin
 	begin
 		select @GroupSortNo = (@UnitInt / @GroupSize) + 1  --This only works because they are both ints so the results is automaticly floored.
 		
-		-- If the Value is closer then a full group to the max set the set the boundary to the max unit.
-		if @MaxGroupSize - @UnitInt  < @GroupSize
+		-- If the Unit is closer to the max then a group then set the boundary to the max unit.
+		if @UnitInt >=  @MaxGroupSize - ( @MaxGroupSize % @GroupSize)
 		set @Group  =  concat(
 				    case when  @ShowGroup = 1 
 				        then concat(@GroupSortNo ,'. ') 
