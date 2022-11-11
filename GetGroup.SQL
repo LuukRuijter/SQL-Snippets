@@ -1,13 +1,3 @@
-USE [DWH_CZR]
-GO
-
-/****** Object:  UserDefinedFunction [dbo].[getGroup]    Script Date: 8-11-2022 16:23:08 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
 /* 
    Date: 	2020-08-20
    Last Change: 2022-08-11
@@ -93,5 +83,3 @@ begin
 	--Fix the ',' thousand separtor to a '.' since we are not yankees. 
 	return replace(@Group,',','.')
 end
-
-GO
