@@ -6,7 +6,7 @@
        	Function to put units into a group. 
 	For instance you want to group numbers from 1-100 into sections of 10.
 	This function will return the group for each unit with the group it should be in + a optional sort number.
-	77 for istance would be placed inside "8. 70 - 80 anything g greater then the max size will be returned as max group size +.
+	77 for instance would be placed inside "8. 70 - 80 anything g greater then the max size will be returned as max group size +.
 	So using the same parameters as the previous example 140 would be "11. 100+" 	
 	When you groups are not rounded like 24 with a max of 30 it will divide the last group with the remainder.
 	Groups of 24 with a max of 30 will result in:
